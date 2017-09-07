@@ -6,7 +6,7 @@
 
 Stateless React Components for Bootstrap 4.
 
-## Getting Started
+## Getting Started -
 
 Follow the [create-react-app instructions](https://github.com/facebookincubator/create-react-app#getting-started) up to the `Adding Bootstrap` section and instead follow the reactstrap version of [adding bootstrap](#adding-bootstrap).
 

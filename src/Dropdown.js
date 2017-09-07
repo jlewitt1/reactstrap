@@ -10,13 +10,34 @@ import TetherContent from './TetherContent';
 import DropdownMenu from './DropdownMenu';
 
 const propTypes = {
+  /**
+   * @property {PropTypes.bool} disabled
+   */
   disabled: PropTypes.bool,
+  /**
+   * @property {PropTypes.bool} dropup
+   */
   dropup: PropTypes.bool,
+  /**
+   * @property {PropTypes.bool} group
+   */
   group: PropTypes.bool,
+  /**
+   * @property {PropTypes.bool} isOpen
+   */
   isOpen: PropTypes.bool,
   size: PropTypes.string,
+  /**
+   * @property {PropTypes.string} tag - default: 'div'
+   */
   tag: PropTypes.string,
+  /**
+   * @property {PropTypes.object|PropTypes.bool} tether
+   */
   tether: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+  /**
+   * @property {PropTypes.func} toggle
+   */
   toggle: PropTypes.func,
   children: PropTypes.node,
   className: PropTypes.string,
@@ -42,8 +63,49 @@ const defaultTetherConfig = {
   ]
 };
 
+/**
+ * @description Dropdown
+ * @example 
+ * 
+ * import React from 'react';
+ * import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+ *
+ * export default class Example extends React.Component {
+ *  constructor(props) {
+ *    super(props);
+ *
+ *     this.toggle = this.toggle.bind(this);
+ *     this.state = {
+ *     dropdownOpen: false
+ *   };
+ *  }
+ *
+ * toggle() {
+ *     this.setState({
+ *       dropdownOpen: !this.state.dropdownOpen
+ *  });
+ * }
+ *
+ *  render() {
+ *   return (
+ *       <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+ *      <DropdownToggle caret>
+ *        Dropdown
+ *      </DropdownToggle>
+ *      <DropdownMenu>
+ *         <DropdownItem header>Header</DropdownItem>
+ *         <DropdownItem disabled>Action</DropdownItem>
+ *         <DropdownItem>Another Action</DropdownItem>
+ *         <DropdownItem divider />
+ *          <DropdownItem>Another Action</DropdownItem>
+ *       </DropdownMenu>
+ *     </Dropdown>     
+ *   );
+ *  }
+ * }
+ */
 class Dropdown extends React.Component {
-  constructor(props) {
+   constructor(props) {
     super(props);
 
     this.addEvents = this.addEvents.bind(this);

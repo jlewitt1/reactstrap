@@ -5,17 +5,44 @@ import { mapToCssModules } from './utils';
 import Button from './Button';
 
 const propTypes = {
+  /**
+   * @property {PropTypes.bool} caret
+   */
   caret: PropTypes.bool,
+  /**
+   * @property {PropTypes.string} color
+   */
   color: PropTypes.string,
   children: PropTypes.node,
+  /**
+   * @property {PropTypes.string} className
+   */
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  /**
+   * @property {PropTypes.bool} disabled
+   */
   disabled: PropTypes.bool,
+  /**
+   * @property {PropTypes.func} onClick
+   */
   onClick: PropTypes.func,
+  /**
+   * @property {PropTypes.string} data-toggle
+   */
   'data-toggle': PropTypes.string,
+  /**
+   * @property {PropTypes.bool} aria-haspopup 
+   */
   'aria-haspopup': PropTypes.bool,
   split: PropTypes.bool,
+  /**
+   * @property {PropTypes.any} tag - defaults to Button component
+   */
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  /**
+   * @property {PropTypes.bool} nav -  For DropdownToggle usage inside a Nav
+   */
   nav: PropTypes.bool,
 };
 

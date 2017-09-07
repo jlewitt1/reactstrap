@@ -9,16 +9,34 @@ const HIDE = 'HIDE';
 const HIDDEN = 'HIDDEN';
 
 const propTypes = {
+  /**
+   * @property {PropTypes.bool} isOpen
+   */
   isOpen: PropTypes.bool,
+  /**
+   * @property {PropTypes.string} className
+   */
   className: PropTypes.node,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   cssModule: PropTypes.object,
+  /**
+   * @property {PropTypes.bool} navbar
+   */
   navbar: PropTypes.bool,
+  /**
+   * @property {shape|number|PropTypes.object} delay - optionally override show/hide delays - default { show: 350, hide: 350 }
+   */
   delay: PropTypes.oneOfType([
     PropTypes.shape({ show: PropTypes.number, hide: PropTypes.number }),
     PropTypes.number,
   ]),
+  /**
+   * @property {PropTypes.func} onOpened
+   */
   onOpened: PropTypes.func,
+  /**
+   * @property {PropTypes.func} onClosed
+   */
   onClosed: PropTypes.func,
 };
 
@@ -34,7 +52,44 @@ const defaultProps = {
   onOpened: () => {},
   onClosed: () => {},
 };
-
+/**
+ * @description Collapse
+ * @example 
+ * import React, { Component } from 'react';
+ * import { Collapse, Button, CardBlock, Card } from 'reactstrap';
+ *
+ * class Example extends Component {
+ *  constructor(props) {
+ *   super(props);
+ *     this.toggle = this.toggle.bind(this);
+ *     this.state = { collapse: false };
+ *  }
+ *
+ *  toggle() {
+ *     this.setState({ collapse: !this.state.collapse });
+ *  }
+ *
+ *   render() {
+ *    return (
+ *       <div>
+ *         <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Toggle</Button>
+ *         <Collapse isOpen={this.state.collapse}>
+ *          <Card>
+ *            <CardBlock>
+ *            Anim pariatur cliche reprehenderit,
+ *             enim eiusmod high life accusamus terry richardson ad squid. Nihil
+ *             anim keffiyeh helvetica, craft beer labore wes anderson cred
+ *             nesciunt sapiente ea proident.
+ *           </CardBlock>
+ *         </Card>
+ *        </Collapse>
+ *     </div>
+ *   );
+ *  }
+ * }
+ *
+ * export default Example;
+ */
 class Collapse extends Component {
   constructor(props) {
     super(props);

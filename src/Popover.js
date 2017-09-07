@@ -5,13 +5,31 @@ import TetherContent from './TetherContent';
 import { getTetherAttachments, mapToCssModules, omit, tetherAttachements } from './utils';
 
 const propTypes = {
+  /**
+   * @property {top|bottom|left|right|top-left|top-center|top-right|right-top|right-middle|right-bottom|bottom-right|bottom-center|bottom-left|left-top|left-middle|left-bottom} placement - convenience attachments for popover. Examples http://github.hubspot.com/tooltip/docs/welcome/
+   */
   placement: PropTypes.oneOf(tetherAttachements),
+  /**
+   * @property {PropTypes.string} target - target div ID, popover is attached to this element
+   */
   target: PropTypes.string.isRequired,
+  /**
+   * @property {PropTypes.bool} isOpen - boolean to control the state of the popover
+   */
   isOpen: PropTypes.bool,
+  /**
+   * @property {PropTypes.object} tether - optionally overide tether config http://tether.io/#options
+   */
   tether: PropTypes.object,
+  /**
+   * @property {PropTypes.func} tetherRef -function which is passed a reference to the instance of tether for manually `position()`ing
+   */
   tetherRef: PropTypes.func,
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  /**
+   * @property {PropTypes.func} toggle - callback for toggling isOpen in the controlling component
+   */
   toggle: PropTypes.func,
 };
 
@@ -32,6 +50,44 @@ const defaultTetherConfig = {
     { to: 'window', attachment: 'together none' }
   ]
 };
+
+/**
+ * @description Popover
+ * @example 
+ * import React from 'react';
+ * import { Button, Popover, PopoverTitle, PopoverContent } from 'reactstrap';
+ *
+ * export default class Example extends React.Component {
+ * constructor(props) {
+ *   super(props);
+ *
+ *    this.toggle = this.toggle.bind(this);
+ *    this.state = {
+ *     popoverOpen: false
+ *   };
+ * }
+ *
+ * toggle() {
+ *    this.setState({
+ *      popoverOpen: !this.state.popoverOpen
+ *   });
+ * }
+ *
+ * render() {
+ *   return (
+ *      <div>
+ *        <Button id="Popover1" onClick={this.toggle}>
+ *         Launch Popover
+ *       </Button>
+ *      <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+ *         <PopoverTitle>Popover Title</PopoverTitle>
+ *       <PopoverContent>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</PopoverContent>
+ *       </Popover>
+ *     </div>
+ *   );
+ * }
+ *}
+ */
 
 class Popover extends React.Component {
   constructor(props) {

@@ -4,9 +4,18 @@ import classNames from 'classnames';
 import { mapToCssModules } from './utils';
 
 const propTypes = {
+  /**
+   * @property {PropTypes.func|PropTypes.string} tag - pass in custom element to use
+   */
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   getRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  /**
+   * @property {PropTypes.bool} disabled
+   */
   disabled: PropTypes.bool,
+  /**
+   * @property {PropTypes.bool} active
+   */
   active: PropTypes.bool,
   className: PropTypes.string,
   cssModule: PropTypes.object,
@@ -17,6 +26,42 @@ const propTypes = {
 const defaultProps = {
   tag: 'a',
 };
+
+/**
+ * @description Nav Link
+ * @example 
+ * import React from 'react';
+ * import { Nav, NavItem, NavLink } from 'reactstrap';
+ *
+ * export default class Example extends React.Component {
+ *   render() {
+ *     return (
+ *       <div>
+ *         <p>List Based</p>
+ *         <Nav>
+ *           <NavItem>
+ *             <NavLink href="#">Link</NavLink>
+ *           </NavItem>
+ *           <NavItem>
+ *             <NavLink href="#">Link</NavLink>
+ *           </NavItem>
+ *           <NavItem>
+ *             <NavLink href="#">Another Link</NavLink>
+ *           </NavItem>
+ *           <NavItem>
+ *             <NavLink disabled href="#">Disabled Link</NavLink>
+ *           </NavItem>
+ *         </Nav>
+ *         <hr />
+ *         <p>Link Based</p>
+ *         <Nav>
+ *           <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink> <NavLink href="#">Another Link</NavLink> <NavLink disabled href="#">Disabled Link</NavLink>
+ *         </Nav>
+ *       </div>
+ *     );
+ *   }
+ * }
+ */
 
 class NavLink extends React.Component {
   constructor(props) {

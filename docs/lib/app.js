@@ -6,6 +6,8 @@ import ReactDOMServer from 'react-dom/server';
 import { Router, RouterContext, match, browserHistory, createMemoryHistory } from 'react-router';
 import routes from './routes';
 import Helmet from 'react-helmet';
+import { Button } from 'reactstrap';
+
 
 // Client render (optional):
 if (typeof document !== 'undefined') {

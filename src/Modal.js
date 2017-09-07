@@ -13,40 +13,124 @@ import {
 } from './utils';
 
 const propTypes = {
+  /**
+   * @property {PropTypes.bool} isOpen - boolean to control the state of the popover
+   */
   isOpen: PropTypes.bool,
+  /**
+   * @property {PropTypes.bool} autoFocus 
+   */
   autoFocus: PropTypes.bool,
+  /**
+   * @property {PropTypes.string} size 
+   */
   size: PropTypes.string,
+  /**
+   * @property {PropTypes.func} toggle - callback for toggling isOpen in the controlling component
+   */
   toggle: PropTypes.func,
+  /**
+   * @property {PropTypes.bool} keyboard 
+   */
   keyboard: PropTypes.bool,
+  /**
+   * @property {PropTypes.string} role - defaults to "dialog"
+   */
   role: PropTypes.string,
+  /**
+   * @property {PropTypes.string} labelledBy - used to reference the ID of the title element in the modal
+   */
   labelledBy: PropTypes.string,
+  /**
+   * @property {PropTypes.bool|static} backdrop - control backdrop, see http://v4-alpha.getbootstrap.com/components/modal/#options
+   */
   backdrop: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.oneOf(['static'])
   ]),
+  /**
+   * @property {PropTypes.func} onEnter - called on componentDidMount
+   */
   onEnter: PropTypes.func,
+  /**
+   * @property {PropTypes.func} onExit - called on componentWillUnmount
+   */
   onExit: PropTypes.func,
+  /**
+   * @property {PropTypes.func} onOpened
+   */
   onOpened: PropTypes.func,
+  /**
+   * @property {PropTypes.func} onClosed
+   */
   onClosed: PropTypes.func,
   children: PropTypes.node,
+  /**
+   * @property {PropTypes.string} className
+   */
   className: PropTypes.string,
+  /**
+   * @property {PropTypes.string} wrapClassName
+   */
   wrapClassName: PropTypes.string,
+  /**
+   * @property {PropTypes.string} modalClassName
+   */
   modalClassName: PropTypes.string,
+  /**
+   * @property {PropTypes.string} backdropClassName
+   */
   backdropClassName: PropTypes.string,
+  /**
+   * @property {PropTypes.string} contentClassName
+   */
   contentClassName: PropTypes.string,
+  /**
+   * @property {PropTypes.bool} fade - boolean to control whether the fade transition occurs (default: true)
+   */
   fade: PropTypes.bool,
+  /**
+   * @property {PropTypes.object} cssModule
+   */
   cssModule: PropTypes.object,
+  /**
+   * @property {PropTypes.number|PropTypes.string} zIndex - zIndex defaults to 1000.
+   */
   zIndex: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
   ]),
+  /**
+   * @property {PropTypes.number} backdropTransitionTimeout - controls appear, enter, and leave (default: 150)
+   */
   backdropTransitionTimeout: PropTypes.number,
+  /**
+   * @property {PropTypes.number} backdropTransitionAppearTimeout - If you need different values for appear v. enter v. leave, use the more specific props like backdropTransitionAppearTimeout
+   */
   backdropTransitionAppearTimeout: PropTypes.number,
+  /**
+   * @property {PropTypes.number} backdropTransitionEnterTimeout
+   */
   backdropTransitionEnterTimeout: PropTypes.number,
+  /**
+   * @property {PropTypes.number} backdropTransitionLeaveTimeout
+   */
   backdropTransitionLeaveTimeout: PropTypes.number,
+  /**
+   * @property {PropTypes.number} modalTransitionTimeout - controls appear, enter, and leave (default: 300)
+   */
   modalTransitionTimeout: PropTypes.number,
+  /**
+   * @property {PropTypes.number} modalTransitionAppearTimeout - If you need different values for appear v. enter v. leave, use the more specific props like modalTransitionAppearTimeout
+   */
   modalTransitionAppearTimeout: PropTypes.number,
+  /**
+   * @property {PropTypes.number} modalTransitionEnterTimeout
+   */
   modalTransitionEnterTimeout: PropTypes.number,
+  /**
+   * @property {PropTypes.number} modalTransitionLeaveTimeout
+   */
   modalTransitionLeaveTimeout: PropTypes.number,
 };
 
@@ -63,6 +147,51 @@ const defaultProps = {
   modalTransitionTimeout: 300,
   backdropTransitionTimeout: 150,
 };
+
+/**
+ * @description Modal
+ * @example 
+ * eslint react/no-multi-comp: 0, react/prop-types: 0 
+ * import React from 'react';
+ * import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+ *
+ * class ModalExample extends React.Component {
+ * constructor(props) {
+ *   super(props);
+ *    this.state = {
+ *     modal: false
+ *    };
+ *
+ *    this.toggle = this.toggle.bind(this);
+ * }  
+ *
+ * toggle() {
+ *   this.setState({
+ *     modal: !this.state.modal
+ *   });
+ * }
+ *
+ * render() {
+ *   return (
+ *     <div>
+ *       <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
+ *       <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+ *         <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+ *         <ModalBody>
+ *           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ *         </ModalBody>
+ *         <ModalFooter>
+ *           <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
+ *           <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+ *         </ModalFooter>
+ *       </Modal>
+ *     </div>
+ *   );
+ *  }
+ * }
+ *
+ * export default ModalExample;
+ */
 
 class Modal extends React.Component {
   constructor(props) {

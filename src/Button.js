@@ -4,14 +4,35 @@ import classNames from 'classnames';
 import { mapToCssModules } from './utils';
 
 const propTypes = {
+  /**
+   * @property {PropTypes.bool} active
+   */
   active: PropTypes.bool,
+  /**
+   * @property {PropTypes.bool} block
+   */
   block: PropTypes.bool,
+  /**
+   * @property {PropTypes.string} color - default: 'secondary'
+   */
   color: PropTypes.string,
+  /**
+   * @property {PropTypes.bool} disabled 
+   */
   disabled: PropTypes.bool,
   outline: PropTypes.bool,
+  /**
+   * @property {PropTypes.func|PropTypes.string} tag - Passes in a component to override default button element (ex: react-router link)
+   */
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   getRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  /**
+   * @property {PropTypes.func} onClick
+   */
   onClick: PropTypes.func,
+  /**
+   * @property {PropTypes.string} size
+   */
   size: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
@@ -22,6 +43,30 @@ const defaultProps = {
   color: 'secondary',
   tag: 'button',
 };
+
+/**
+ * @description Buttons
+ * @example 
+ * import React from 'react';
+ * import { Button } from 'reactstrap'; 
+ *
+ * export default class Example extends React.Component {
+ *   render() {
+ *       return (
+ *       <div>
+ *           <Button color="primary">primary</Button>{' '}
+ *           <Button color="secondary">secondary</Button>{' '}
+ *         <Button color="success">success</Button>{' '}
+ *         <Button color="info">info</Button>{' '}
+ *           <Button color="warning">warning</Button>{' '}
+ *           <Button color="danger">danger</Button>{' '}
+ *         <Button color="link">link</Button>
+ *         </div>
+ *     );
+ *   }
+ * }
+ *   
+ */
 
 class Button extends React.Component {
   constructor(props) {

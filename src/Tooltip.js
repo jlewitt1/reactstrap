@@ -5,19 +5,43 @@ import TetherContent from './TetherContent';
 import { getTetherAttachments, mapToCssModules, omit, tetherAttachements } from './utils';
 
 const propTypes = {
+  /**
+   * @property {top|bottom|left|right|top-left|top-center|top-right|right-top|right-middle|right-bottom|bottom-right|bottom-center|bottom-left|left-top|left-middle|left-bottom} placement - convenience attachments for popover. Examples http://github.hubspot.com/tooltip/docs/welcome/
+   */
   placement: PropTypes.oneOf(tetherAttachements),
+  /**
+   * @property {PropTypes.string|PropTypes.object} target - callback for toggling isOpen in the controlling component
+   */
   target: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object
   ]).isRequired,
+  /**
+   * @property {PropTypes.bool} isOpen - boolean to control the state of the tooltip
+   */
   isOpen: PropTypes.bool,
   disabled: PropTypes.bool,
+  /**
+   * @property {PropTypes.object} tether - target element or element ID, popover is attached to this element
+   */
   tether: PropTypes.object,
+  /**
+   * @property {PropTypes.func} tetherRef - function which is passed a reference to the instance of tether for manually `position()`ing
+   */
   tetherRef: PropTypes.func,
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  /**
+   * @property {PropTypes.func} toggle - callback for toggling isOpen in the controlling component
+   */
   toggle: PropTypes.func,
+  /**
+   * @property {PropTypes.bool} autohide - optionally hide tooltip when hovering over tooltip content - default true
+   */
   autohide: PropTypes.bool,
+  /**
+   * @property {PropTypes.object|PropTypes.number} delay - function which is passed a reference to the instance of tether for manually `position()`ing
+   */
   delay: PropTypes.oneOfType([
     PropTypes.shape({ show: PropTypes.number, hide: PropTypes.number }),
     PropTypes.number,
@@ -49,6 +73,40 @@ const defaultTetherConfig = {
   ]
 };
 
+/**
+ * @description Tooltip
+ * @example
+ * import React from 'react';
+ * import { Tooltip } from 'reactstrap';
+ *
+ * export default class Example extends React.Component {
+ *   constructor(props) {
+ *     super(props);
+ * 
+ *     this.toggle = this.toggle.bind(this);
+ *     this.state = {
+ *       tooltipOpen: false
+ *     };
+ *   }
+ * 
+ *   toggle() {
+ *     this.setState({
+ *       tooltipOpen: !this.state.tooltipOpen
+ *     });
+ *   }
+ * 
+ *   render() {
+ *     return (
+ *       <div>
+ *         <p>Somewhere in here is a <a href="#" id="TooltipExample">tooltip</a>.</p>
+ *         <Tooltip placement="right" isOpen={this.state.tooltipOpen} target="TooltipExample" toggle={this.toggle}>
+ *           Hello world!
+ *         </Tooltip>
+ *       </div>
+ *     );
+ *   }
+ * }
+ */
 class Tooltip extends React.Component {
   constructor(props) {
     super(props);

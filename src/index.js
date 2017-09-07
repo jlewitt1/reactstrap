@@ -71,6 +71,8 @@ import Collapse from './Collapse';
 import ListGroupItem from './ListGroupItem';
 import ListGroupItemHeading from './ListGroupItemHeading';
 import ListGroupItemText from './ListGroupItemText';
+// import 'bootstrap/dist/css/bootstrap.css';
+
 import {
   UncontrolledAlert,
   UncontrolledButtonDropdown,

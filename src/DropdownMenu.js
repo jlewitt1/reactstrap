@@ -19,6 +19,22 @@ const contextTypes = {
   isOpen: PropTypes.bool.isRequired
 };
 
+/**
+ * <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}> 
+ * <DropdownToggle caret>
+ *   Dropdown
+ * </DropdownToggle>
+ * <DropdownMenu right>
+ *   <DropdownItem header>Header</DropdownItem>
+ *   <DropdownItem disabled>Action</DropdownItem>
+ *   <DropdownItem>Another Action</DropdownItem>
+ *   <DropdownItem divider/>
+ *   <DropdownItem>Another Action</DropdownItem>
+ * </DropdownMenu>
+ * </Dropdown>
+ * 
+ */
+
 const DropdownMenu = (props, context) => {
   const { className, cssModule, right, tag: Tag, ...attributes } = props;
   const classes = mapToCssModules(classNames(
