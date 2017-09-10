@@ -1,11 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import Alert from '../Alert';
+import ButtonDropdown from '../ButtonDropdown';
+import Dropdown from '../Dropdown';
+import NavDropdown from '../NavDropdown';
+import Tooltip from '../Tooltip';
+
 import {
-  Alert,
-  ButtonDropdown,
-  Dropdown,
-  NavDropdown,
-  Tooltip,
   UncontrolledAlert,
   UncontrolledButtonDropdown,
   UncontrolledDropdown,

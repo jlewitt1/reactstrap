@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { PaginationItem } from '../PaginationItem';
+import PaginationItem from '../PaginationItem';
 
 describe('PaginationItem', () => {
   it('should render default tag', () => {

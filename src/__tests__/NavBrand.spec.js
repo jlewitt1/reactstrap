@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { NavbarBrand } from '../NavbarBrand';
+import NavbarBrand from '../NavbarBrand';
 
 describe('NavbarBrand', () => {
   it('should render .navbar-brand markup', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import { Tooltip } from '../Tooltip';
+import Tooltip from '../Tooltip';
 
 describe('Tooltip', () => {
   let isOpen;

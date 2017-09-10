@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from './utils';
 import Dropdown from './Dropdown';
+import DropdownToggle from './DropdownToggle';
 
 const propTypes = {
   children: PropTypes.node,

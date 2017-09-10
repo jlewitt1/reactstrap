@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { NavItem } from '../NavItem';
+import NavItem from '../NavItem';
 
 describe('NavItem', () => {
   it('should render .nav-item markup', () => {

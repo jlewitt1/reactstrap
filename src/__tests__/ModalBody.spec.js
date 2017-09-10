@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ModalBody } from '../ModalBody';
+import ModalBody from '../ModalBody';
 
 describe('ModalBody', () => {
   it('should render with "modal-body" class', () => {

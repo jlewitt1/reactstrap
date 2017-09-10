@@ -1,7 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { NavDropdown, DropdownToggle, DropdownMenu, DropdownItem } from '../NavDropdown';
-
+import NavDropdown from '../NavDropdown';
+import DropdownMenu from '../DropdownMenu';
+import DropdownItem from '../DropdownItem';
+import DropdownToggle from '../DropdownToggle';
 
 describe('NavDropdown', () => {
   let isOpen;

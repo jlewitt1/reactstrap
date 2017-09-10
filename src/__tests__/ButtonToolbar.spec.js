@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ButtonToolbar } from '../ButtonToolbar';
+import ButtonToolbar from '../ButtonToolbar';
 
 describe('ButtonToolbar', () => {
   it('should render children', () => {

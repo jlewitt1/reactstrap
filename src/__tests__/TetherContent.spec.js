@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { TetherContent } from '../TetherContent';
+import TetherContent from '../TetherContent';
 
 describe('TetherContent', () => {
   let state;

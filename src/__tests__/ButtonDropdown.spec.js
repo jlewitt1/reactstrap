@@ -1,6 +1,10 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from '../ButtonDropdown';
+import ButtonDropdown from '../ButtonDropdown';
+import DropdownToggle from '../DropdownToggle';
+import DropdownMenu from '../DropdownMenu';
+import DropdownItem from '../DropdownItem';
+
 
 
 describe('ButtonDropdown', () => {
