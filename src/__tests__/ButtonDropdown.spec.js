@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from '../';
+import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from '../ButtonDropdown';
 
 
 describe('ButtonDropdown', () => {

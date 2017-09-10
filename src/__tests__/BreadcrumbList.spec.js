@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { BreadcrumbItem } from '../';
+import { BreadcrumbItem } from '../BreadcrumbItem';
 
 describe('BreadcrumbItem', () => {
   it('should render children', () => {

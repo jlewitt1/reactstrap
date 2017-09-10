@@ -92,7 +92,8 @@
     "lodash.isobject": "^3.0.2",
     "lodash.tonumber": "^4.0.3",
     "prop-types": "^15.5.8",
-    "reactstrap-tether": "1.3.4"
+    "reactstrap-tether": "1.3.4",
+    "vinyl-paths": "^2.1.0"
   },
   "peerDependencies": {
     "react": "^0.14.9 || ^15.3.0",
@@ -103,6 +104,8 @@
     "babel-cli": "^6.14.0",
     "babel-loader": "^6.2.2",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-react": "^6.11.1",
     "babel-preset-react-app": "^0.2.1",
@@ -118,7 +121,7 @@
     "enzyme": "^2.8.2",
     "eslint": "^3.2.2",
     "eslint-config-airbnb": "^10.0.0",
-    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^6.0.0",
     "eslint-plugin-standard": "^2.0.0",

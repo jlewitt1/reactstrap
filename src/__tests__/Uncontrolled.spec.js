@@ -11,7 +11,7 @@ import {
   UncontrolledDropdown,
   UncontrolledNavDropdown,
   UncontrolledTooltip,
-} from '../';
+} from '../Uncontrolled';
 
 describe('UncontrolledAlert', () => {
   it('should be an Alert', () => {

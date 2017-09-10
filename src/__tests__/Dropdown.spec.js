@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, TetherContent } from '../';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, TetherContent } from '../Dropdown';
 
 
 describe('Dropdown', () => {

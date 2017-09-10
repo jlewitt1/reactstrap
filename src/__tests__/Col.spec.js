@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Col } from '../';
+import { Col } from '../Col';
 
 describe('Col', () => {
   it('should render default .col-* markup', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ListGroup } from '../';
+import { ListGroup } from '../ListGroup';
 
 describe('ListGroup', () => {
   it('should render with "list-group" class', () => {

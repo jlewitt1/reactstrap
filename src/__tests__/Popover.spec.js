@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { Popover, PopoverTitle, PopoverContent, TetherContent } from '../';
+import { Popover, PopoverTitle, PopoverContent, TetherContent } from '../Popover';
 
 describe('Popover', () => {
   let element;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Label } from '../';
+import { Label } from '../Label';
 
 describe('Label', () => {
   it('should render a label tag by default', () => {

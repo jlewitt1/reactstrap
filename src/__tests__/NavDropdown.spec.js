@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { NavDropdown, DropdownToggle, DropdownMenu, DropdownItem } from '../';
+import { NavDropdown, DropdownToggle, DropdownMenu, DropdownItem } from '../NavDropdown';
 
 
 describe('NavDropdown', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { Modal, ModalBody } from '../';
+import { Modal, ModalBody } from '../Modal';
 
 describe('Modal', () => {
   let isOpen;

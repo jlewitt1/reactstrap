@@ -235,7 +235,7 @@ Carousel.propTypes = {
    */
   activeIndex: PropTypes.number,
   /**
-   * @property {PropTypes.number|PropTypes.bool} interval
+   * @property {PropTypes.number|PropTypes.bool|PropTypes.string} interval
    */
   interval: PropTypes.oneOfType([
     PropTypes.number,

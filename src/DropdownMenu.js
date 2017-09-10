@@ -20,6 +20,8 @@ const contextTypes = {
 };
 
 /**
+ * @description Dropdown Menu
+ * @example
  * <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}> 
  * <DropdownToggle caret>
  *   Dropdown

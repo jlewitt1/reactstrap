@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { PaginationLink } from '../';
+import { PaginationLink } from '../PaginationLink';
 
 describe('PaginationLink', () => {
   it('should render default tag', () => {

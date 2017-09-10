@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Input } from '../';
+import { Input } from '../Input';
 
 describe('Input', () => {
   it('should render with "input" tag when no type is provided', () => {

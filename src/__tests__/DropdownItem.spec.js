@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { DropdownItem } from '../';
+import { DropdownItem } from '../DropdownItem';
 
 describe('DropdownItem', () => {
   let isOpen;

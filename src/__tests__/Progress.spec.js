@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Progress } from '../';
+import { Progress } from '../Progress';
 
 describe('Progress', () => {
   it('should render with "div" tag by default', () => {

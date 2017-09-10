@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { InputGroupButton, Button } from '../';
+import { InputGroupButton, Button } from '../InputGroupButton';
 
 describe('InputGroupButton', () => {
   it('should render with "div" tag', () => {
