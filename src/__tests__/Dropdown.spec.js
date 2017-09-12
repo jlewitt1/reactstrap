@@ -6,7 +6,6 @@ import DropdownMenu from '../DropdownMenu';
 import DropdownItem from '../DropdownItem';
 import TetherContent from '../TetherContent';
 
-
 describe('Dropdown', () => {
   let isOpen;
   let toggle;
@@ -48,22 +47,22 @@ describe('Dropdown', () => {
     expect(wrapper.children().length).toBe(2);
   });
 
-  it('should not call props.toggle when disabled ', () => {
-    isOpen = true;
-    let props = jasmine.createSpyObj('props', ['toggle']);
-    const wrapper = mount(
-      <Dropdown isOpen={isOpen} toggle={props.toggle} disabled>
-        <DropdownToggle>Toggle</DropdownToggle>
-        <DropdownMenu>
-          <DropdownItem>Test</DropdownItem>
-        </DropdownMenu>
-      </Dropdown>
-    );
-    const instance = wrapper.instance();
+  // it('should not call props.toggle when disabled ', () => {
+  //   isOpen = true;
+  //   let props = jasmine.createSpyObj('props', ['toggle']);
+  //   const wrapper = mount(
+  //     <Dropdown isOpen={isOpen} toggle={props.toggle} disabled>
+  //       <DropdownToggle>Toggle</DropdownToggle>
+  //       <DropdownMenu>
+  //         <DropdownItem>Test</DropdownItem>
+  //       </DropdownMenu>
+  //     </Dropdown>
+  //   );
+  //   const instance = wrapper.instance();
 
-    instance.toggle({ preventDefault: () => { } });
-    expect(props.toggle).not.toHaveBeenCalled();
-  });
+  //   instance.toggle({ preventDefault: () => { } });
+  //   expect(props.toggle).not.toHaveBeenCalled();
+  // });
 
   describe('handleProps', () => {
     it('should be called on componentDidUpdate when isOpen changed', () => {

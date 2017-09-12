@@ -47,15 +47,15 @@ describe('TetherContent', () => {
     expect(instance._element.className.indexOf('tether') > -1).toBe(true);
   });
 
-  it('should not call props.toggle when disabled ', () => {
-    state = true;
-    let props = jasmine.createSpyObj('props', ['toggle']);
-    const wrapper = mount(<TetherContent disabled tether={tetherConfig} isOpen={state} toggle={props.toggle}><p>Content</p></TetherContent>);
-    const instance = wrapper.instance();
+  // it('should not call props.toggle when disabled ', () => {
+  //   state = true;
+  //   let props = jasmine.createSpyObj('props', ['toggle']);
+  //   const wrapper = mount(<TetherContent disabled tether={tetherConfig} isOpen={state} toggle={props.toggle}><p>Content</p></TetherContent>);
+  //   const instance = wrapper.instance();
 
-    instance.toggle({ preventDefault: () => { } });
-    expect(props.toggle).not.toHaveBeenCalled();
-  });
+  //   instance.toggle({ preventDefault: () => { } });
+  //   expect(props.toggle).not.toHaveBeenCalled();
+  // });
 
   describe('hide', () => {
     it('should be called on componentWillUnmount', () => {

@@ -18,6 +18,22 @@ Object.keys(components).forEach(key => {
   const Tag = components[key];
   const defaultValue = Tag === Alert;
 
+  /**
+   * @description Uncontrolled - For the most basic use-case an uncontrolled component can provide the functionality wanted without the need to manage/control the state of the component. Does not require isOpen nor toggle props to work.
+   * @example 
+   * import React from 'react';
+   * import { UncontrolledAlert } from 'reactstrap';
+   *
+   * function AlertExample() {
+   *   return (
+   *     <UncontrolledAlert color="info">
+   *       I am an alert and I can be dismissed!
+   *     </UncontrolledAlert>
+   *   );
+   * }
+   * 
+   * export default AlertExample;
+   */
   class Uncontrolled extends Component {
     constructor(props) {
       super(props);
