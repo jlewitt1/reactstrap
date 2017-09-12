@@ -20,7 +20,7 @@ const contextTypes = {
 };
 
 /**
- * @description Dropdown Menu
+ * @description Dropdown Menu - The DropdownMenu can automatically be flipped (dropup vs dropdown) according to space available in the viewport by passing the tether prop to Dropdown <Dropdown tether />. For full customization, an object with Tether options can be used instead.
  * @example
  * <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}> 
  * <DropdownToggle caret>

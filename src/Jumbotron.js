@@ -23,7 +23,7 @@ const defaultProps = {
   tag: 'div'
 };
 /**
- * @description Jumbotron
+ * @description Jumbotron - This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.
  * @example 
  * import React from 'react';
  * import { Jumbotron, Button } from 'reactstrap';
