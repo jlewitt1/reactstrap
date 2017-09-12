@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { CardBlock } from '../CardBlock';
+import CardBlock from '../CardBlock';
 
 describe('CardBlock', () => {
   it('should render with "card-block" class', () => {

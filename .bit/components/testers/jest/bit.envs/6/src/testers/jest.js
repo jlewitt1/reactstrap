@@ -22,10 +22,11 @@ const React = require('react');
 const ReactDom = require('react-dom');
 const path = require('path');
 const fs = require('fs');
+const randomstring = require("randomstring");
 const isEmptyObject = obj => Object.keys(obj).length === 0;
 const exec = require('child-process-promise').exec;
-
-const resultsFilePath = 'results.json';
+const rand = randomstring.generate();
+const resultsFilePath = `results-${rand}.json`;
 
 function mockDom(markup) {
   var jsdom = require('jsdom');
@@ -65,6 +66,7 @@ const normalizeResults = (results) => {
 const readResults = (filePath = 'results.json') => {
   const results = fs.readFileSync(filePath);
   const parsedResults = JSON.parse(results);
+  console.log(parsedResults);
   fs.unlinkSync(filePath);
   return parsedResults;
 }
@@ -75,6 +77,7 @@ const run = (specFile) => {
     // There is not valid json return, see details here:
     // https://github.com/facebook/jest/issues/4399
     const cmd = `node ${jestPath} ${specFile} --json --outputFile="${resultsFilePath}"`;
+    console.log(cmd);
   return exec(cmd).then(({err, stdout, stderr}) => {
     const parsedResults = readResults(resultsFilePath);
     return normalizeResults(parsedResults);
@@ -90,13 +93,13 @@ module.exports = {
     jest,
     sinon,
     mockDom,
-    ReactDom
+    ReactDom,
   },
   modules: {
     jest,
     sinon,
     'react-dom/test-utils': TestUtils,
     'react-addons-test-utils': TestUtils,
-    'react-dom': ReactDom
+    'react-dom': ReactDom,
   }
 };

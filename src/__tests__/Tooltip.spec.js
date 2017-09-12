@@ -11,6 +11,7 @@ describe('Tooltip', () => {
   let target;
   let innerTarget;
 
+
   beforeEach(() => {
     isOpen = false;
     toggle = () => { isOpen = !isOpen; };
@@ -23,7 +24,6 @@ describe('Tooltip', () => {
     document.body.appendChild(element);
     target = document.getElementById('target');
     innerTarget = document.getElementById('innerTarget');
-
     jasmine.clock().install();
   });
 

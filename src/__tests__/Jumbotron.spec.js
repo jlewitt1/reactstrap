@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Jumbotron } from '../Jumbotron';
+import Jumbotron from '../Jumbotron';
 
 describe('Jumbotron', () => {
   it('should render children', () => {

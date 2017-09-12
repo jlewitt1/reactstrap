@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { InputGroupAddon } from '../InputGroupAddon';
+import InputGroupAddon from '../InputGroupAddon';
 
 describe('InputGroupAddon', () => {
   it('should render with "div" tag', () => {

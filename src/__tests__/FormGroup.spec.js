@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { FormGroup } from '../FormGroup';
+import FormGroup from '../FormGroup';
 
 describe('FormGroup', () => {
   it('should render with "form" tag by default', () => {

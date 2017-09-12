@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { FormFeedback } from '../FormFeedback';
+import FormFeedback from '../FormFeedback';
 
 describe('FormFeedback', () => {
   it('should render with "form" tag by default', () => {

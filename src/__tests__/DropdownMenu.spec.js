@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { DropdownMenu } from '../DropdownMenu';
+import DropdownMenu from '../DropdownMenu';
 
 describe('DropdownMenu', () => {
   let isOpen;

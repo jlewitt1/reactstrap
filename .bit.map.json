@@ -89,22 +89,6 @@
         "origin": "AUTHORED",
         "mainFile": "src/TabPane.js"
     },
-    "src/utils": {
-        "files": [
-            {
-                "relativePath": "src/utils.js",
-                "test": false,
-                "name": "utils.js"
-            },
-            {
-                "relativePath": "src/__tests__/utils.spec.js",
-                "test": true,
-                "name": "utils.spec.js"
-            }
-        ],
-        "origin": "AUTHORED",
-        "mainFile": "src/utils.js"
-    },
     "src/alert": {
         "files": [
             {
@@ -1143,7 +1127,8 @@
             }
         ],
         "origin": "AUTHORED",
-        "mainFile": "src/Tooltip.js"
+        "mainFile": "src/Tooltip.js",
+        "mainDistFile": "dist/src/Tooltip.js"
     },
     "src/uncontrolled": {
         "files": [
@@ -1160,5 +1145,21 @@
         ],
         "origin": "AUTHORED",
         "mainFile": "src/Uncontrolled.js"
+    },
+    "src/utils": {
+        "files": [
+            {
+                "relativePath": "src/utils.js",
+                "test": false,
+                "name": "utils.js"
+            },
+            {
+                "relativePath": "src/__tests__/utils.spec.js",
+                "test": true,
+                "name": "utils.spec.js"
+            }
+        ],
+        "origin": "AUTHORED",
+        "mainFile": "src/utils.js"
     }
 }

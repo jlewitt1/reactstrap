@@ -1,11 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Alert } from '../Alert';
-
-// import Alert from './Alert';
+import Alert from '../Alert';
 
 
-describe('Alert', () => {
+describe.only('Alert', () => {
   it('should render children', () => {
     const alert = shallow(<Alert>Yo!</Alert>).find('div');
     expect(alert.text()).toBe('Yo!');

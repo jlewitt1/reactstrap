@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { CardImg } from '../CardImg';
+import CardImg from '../CardImg';
 
 describe('CardImg', () => {
   it('should render with "card-img" class', () => {

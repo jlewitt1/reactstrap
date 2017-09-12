@@ -1,10 +1,11 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { Carousel } from '../Carousel';
-import CarouselItem from '../CarouselItem';
+import Carousel from '../Carousel';
 import CarouselIndicators from '../CarouselIndicators';
 import CarouselControl from '../CarouselControl';
 import CarouselCaption from '../CarouselCaption';
+import CarouselItem from '../CarouselItem';
+
 
 describe('Carousel', () => {
   beforeEach(() => {

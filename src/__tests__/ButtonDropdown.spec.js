@@ -5,8 +5,6 @@ import DropdownToggle from '../DropdownToggle';
 import DropdownMenu from '../DropdownMenu';
 import DropdownItem from '../DropdownItem';
 
-
-
 describe('ButtonDropdown', () => {
   let isOpen;
   let toggle;
